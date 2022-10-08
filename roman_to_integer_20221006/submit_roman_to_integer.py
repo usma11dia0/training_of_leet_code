@@ -1,5 +1,6 @@
 from typing import List
 
+
 def romanToInt(s: str) -> int:
     sum = 0
     count_roman = {
