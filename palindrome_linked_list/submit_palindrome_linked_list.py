@@ -32,15 +32,15 @@ class LinkedList(object):
         while current_node:
             print(current_node.val)
             current_node = current_node.next
-    
-    def remove(self, data: Any) -> None:
-        current_node = self.head
-        if current_node
 
 
 # Optional[ListNode]はListNodeのリストという意味ではない
 def isPalindrome(head: Optional[ListNode]) -> bool:
-    return head.next.val
+    nums = []
+    while head:
+        nums.append(head.val)
+        head = head.next
+    return nums == nums[::-1]
 
 
 if __name__ == "__main__":
@@ -49,9 +49,9 @@ if __name__ == "__main__":
     l.append(1)
     l.append(2)
     l.append(2)
-    l.append(1)
+    l.append(2)
     # print(l.head.val)
     # print(l.head.next.val)
-    l.print()
+    # l.print()
     print(isPalindrome(l.head))
 
