@@ -34,7 +34,8 @@ class LinkedList(object):
             current_node = current_node.next
 
 
-# Optional[ListNode]はListNodeのリストという意味ではない
+# Optional[ListNode]はListNodeのリストという意味ではなく、
+# Node単体をOptionalで囲っているという意味
 def isPalindrome(head: Optional[ListNode]) -> bool:
     nums = []
     while head:
