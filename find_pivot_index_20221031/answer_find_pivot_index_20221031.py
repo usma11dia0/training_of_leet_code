@@ -1,5 +1,9 @@
-# question
+# 得られた学び：for文内にさらにfor文(sum関数含む)があると計算量が膨大になりがち。for文を少なくする方法を考える。
+#             合計値を最初に算出して、後から引いていく事でfor文の繰り返しを減らす。
+
+# answer
 # https://leetcode.com/problems/find-pivot-index/?envType=study-plan&id=level-1
+
 from typing import List
 
 # question
@@ -13,7 +17,7 @@ class Solution:
         leftsum = 0
         for i, x in enumerate(nums):
             if leftsum == S - leftsum - x:
-                return i 
+                return i
             leftsum += x
         return -1
 

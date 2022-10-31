@@ -1,3 +1,7 @@
+# 得られた学び：for文にてindexを一つ減らしたリストを活用することで、記載コード量を減らすことが出来る。
+# 　　　　　　　リストのindex指定による要素更新に慣れる。
+
+
 # answer
 # https://leetcode.com/problems/running-sum-of-1d-array/discuss/2635285/Comprehensive-Python-Explanation-4-methods
 from typing import List
