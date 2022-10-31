@@ -1,4 +1,4 @@
-# 参考URL
+# answer
 # https://leetcode.com/problems/running-sum-of-1d-array/discuss/2635285/Comprehensive-Python-Explanation-4-methods
 from typing import List
 
