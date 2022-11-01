@@ -9,8 +9,14 @@
 #         4.すでに格納されていた場合はbreakでfor文ループから抜け出す。
 
 # Wrong Answer 同じ文字で二つの文字を置き換えることが出来ないため、方針自体が誤り。
+#   s = "bbbaaaba"
+#   t = "aaabbbba"  b→aとマッピングしているのに、最後から二組目はb→bとマッピングしてしまっているので×。
+
+from xmlrpc.client import boolean
+
+
 class Solution:
-    def isIsomorphic(self, s: str, t: str) -> int:
+    def isIsomorphic(self, s: str, t: str) -> boolean:
         s_char_list = []
         t_char_list = []
         for s_char in s:
