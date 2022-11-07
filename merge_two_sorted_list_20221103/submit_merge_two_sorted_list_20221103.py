@@ -12,24 +12,12 @@ class ListNode:
         self.val = val
         self.next = next
 
-
-class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]):
-        dummy = res = ListNode()
-
-        while list1 and list2:
-            if list1.val <= list2.val:
-                dummy.next = list1
-                list1 = list1.next
-            else:
-                dummy.next = list2
-                list2 = list2.next
-
-            dummy = dummy.next
-
-        dummy.next = list1 or list2
-
-        return res.next
+    def show(self):
+        res = []
+        while self:
+            res.append(self.val)
+            self = self.next
+        return res
 
 
 # テスト用関数 単方向リストのlist1,list2を作成する。
@@ -79,6 +67,25 @@ class LinkedList:
         current_node = None
 
 
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]):
+        dummy = res = ListNode()
+
+        while list1 and list2:
+            if list1.val <= list2.val:
+                dummy.next = list1
+                list1 = list1.next
+            else:
+                dummy.next = list2
+                list2 = list2.next
+
+            dummy = dummy.next
+
+        dummy.next = list1 or list2
+
+        return res.next
+
+
 if __name__ == "__main__":
 
     # リストを直接テストデータとして利用する → ×
@@ -108,6 +115,7 @@ if __name__ == "__main__":
     list2.append(1)
     list2.append(2)
     list2.append(4)
-    print(list1.print())
-    list1.remove(3)
-    print(list1.print())
+    # print(list1.print())
+    # print(list2.print())
+    test = Solution()
+    print(test.mergeTwoLists(list1.head, list2.head).show())
