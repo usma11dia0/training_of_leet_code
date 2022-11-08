@@ -44,9 +44,25 @@ class Solution:
         head = previous_node
         return head
 
+    def reverseList_recursive(self, head: Optional[ListNode]) -> None:
+        def _reverseList_recursive(
+            current_node: Optional[ListNode], previous_node: Optional[ListNode]
+        ):
+            if not current_node:
+                return previous_node
+            next_node = current_node.next
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = next_node
+            return _reverseList_recursive(current_node, previous_node)
+
+        head = _reverseList_recursive(head, None)
+        return head
+
 
 if __name__ == "__main__":
-    data = ListNode().createLinkedList([1, 2, 3])
+    data = ListNode().createLinkedList([1, 2, 3, 4])
     # print(data.show())
     test = Solution()
-    print(test.reverseList(data).show())
+    # print(test.reverseList(data).show())
+    print(test.reverseList_recursive(data).show())
